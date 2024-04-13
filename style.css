@@ -38,6 +38,9 @@ footer{
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 62px;
     width: 100%;
     display: flex;
@@ -52,6 +55,60 @@ header>.header_logo{
 
 header>nav{
     display: none;
+}
+
+
+#hero{
+    padding: 0;
+    margin-top: 62px;
+    height: 457px;
+    width: 100%;
+    background-color:#F8B653;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/images/hero/hero_mobile_bg.png);
+}
+
+#hero>.content{
+    padding-top: 50px;
+    text-align: center;
+}
+
+#hero>.content>.location{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 12px;
+}
+
+#hero>.content>h1{
+    font-size: 44px;
+    line-height: 44px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+#hero>.content>.description{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 40px;
+}
+
+#hero>.content>.book{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 7px 7px 7px 30px;
+    border-radius: 25px;
+    background-color: white;
+    border: none;
+    outline: none;
+    margin: auto;
+}
+#hero>.content>.book>img{
+    width: 36px;
+    height: 36px;
 }
 
 @media (min-width:768px) {
