@@ -34,26 +34,27 @@ html{
 header,
 section, 
 footer{
-    padding: 15px;
+    padding-inline: 15px;
 }
 
 header{
     position: fixed;
     top: 0;
     left: 0;
-    height: 62px;
     width: 100%;
+}
+header>div{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header>.header_logo{
+header .header_logo{
     width: 46px;
     height: 38px;
 }
 
-header>nav{
+header nav{
     display: none;
 }
 
@@ -61,41 +62,52 @@ header>nav{
 #hero{
     padding: 0;
     margin-top: 62px;
-    height: 457px;
     width: 100%;
     background-color:#F8B653;
+}
+#hero>.content{
+    width: 320px;
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    position: relative;
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+    height: 457px;
     background-image: url(/images/hero/hero_mobile_bg.png);
 }
-
-#hero>.content{
-    padding-top: 50px;
-    text-align: center;
+#hero>.content>.secondary_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-
-#hero>.content>.location{
+#hero>.content>.secondary_bg_md{
+    display: none;
+}
+#hero>.content>.hero_info{
+    position: relative;
+    z-index: 10;
+}
+#hero>.content>.hero_info>.location{
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 12px;
 }
-
-#hero>.content>h1{
+#hero>.content>.hero_info>h1{
     font-size: 44px;
     line-height: 44px;
     font-weight: 700;
     margin-bottom: 22px;
 }
-#hero>.content>.description{
+#hero>.content>.hero_info>.description{
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     margin-bottom: 40px;
 }
-
-#hero>.content>.book{
+#hero>.content>.hero_info>.book{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -106,7 +118,7 @@ header>nav{
     outline: none;
     margin: auto;
 }
-#hero>.content>.book>img{
+#hero>.content>.hero_info>.book>img{
     width: 36px;
     height: 36px;
 }
@@ -115,34 +127,97 @@ header>nav{
     header,
     section, 
     footer{
-        padding: 45px;
+        padding-inline: 45px;
     }
 
-    header{
+    header>div{
         height: 76px;
     }
     
-    header>.header_logo{
+    header .header_logo{
         width: 63px;
         height: 52px;
     }
 
-    header>img:nth-child(2){
+    header img:nth-child(2){
         display: none;
     }
 
-    header>nav{
+    header nav{
         display: block;
     }
 
-    header>nav>ul{
+    header nav>ul{
         display: flex;
         list-style-type: none;
         align-items: start;
         gap: var(--mobile_margin_lg);
     }
-    header>nav>ul>li>.anchor{
+    header nav>ul>li>.anchor{
         text-decoration: none;
+    }
+
+    #hero{
+        padding: 0;
+        margin-top: 76px;
+        background-color:#F8B653;
+    }
+    #hero>.content{
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+        background-size: cover;
+        height: 868px;
+        padding-top: 140px;
+        background-image: url(/images/hero/hero_mobile_bg.png);
+    }
+    #hero>.content>.secondary_bg{
+        display: none;
+    }
+    #hero>.content>.secondary_bg_md{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500px;
+    }
+    #hero>.content>.hero_info{
+        position: relative;
+        z-index: 10;
+    }
+    #hero>.content>.hero_info>.location{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 12px;
+    }
+    #hero>.content>.hero_info>h1{
+        font-size: 44px;
+        line-height: 44px;
+        font-weight: 700;
+        margin-bottom: 22px;
+    }
+    #hero>.content>.hero_info>.description{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 40px;
+    }
+    #hero>.content>.hero_info>.book{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 7px 7px 7px 30px;
+        border-radius: 25px;
+        background-color: white;
+        border: none;
+        outline: none;
+        margin: auto;
+    }
+    #hero>.content>.hero_info>.book>img{
+        width: 36px;
+        height: 36px;
     }
 }
 
@@ -154,7 +229,7 @@ header>nav{
         padding: 0px;
     }
 
-    header{
+    header>div{
         width: 1170px;
         margin: auto;
     }
