@@ -63,24 +63,26 @@ header nav{
     padding: 0;
     margin-top: 62px;
     width: 100%;
-    background-color:#F8B653;
 }
 #hero>.content{
-    width: 320px;
+    overflow-y: hidden;
+    width: 100%;
     margin: auto;
     padding-top: 50px;
     text-align: center;
     position: relative;
     background-position: bottom;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 457px;
+    min-height: 457px;
+    height: 100vw;
     background-image: url(/images/hero/hero_mobile_bg.png);
 }
 #hero>.content>.secondary_bg{
     position: absolute;
     left: 0;
-    top: 0;
+    top: -40vw;
+    width: 100%;
 }
 #hero>.content>.secondary_bg_md{
     display: none;
@@ -172,7 +174,7 @@ header nav{
         background-image: url(/images/hero/hero_mobile_bg.png);
     }
     #hero>.content>.secondary_bg{
-        display: none;
+        /* display: none; */
     }
     #hero>.content>.secondary_bg_md{
         position: absolute;
@@ -233,5 +235,4 @@ header nav{
         width: 1170px;
         margin: auto;
     }
-
 }
