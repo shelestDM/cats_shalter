@@ -42,11 +42,13 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    height: 62px;
 }
 header>div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 header .header_logo{
@@ -84,9 +86,6 @@ header nav{
     top: -40vw;
     width: 100%;
 }
-#hero>.content>.secondary_bg_md{
-    display: none;
-}
 #hero>.content>.hero_info{
     position: relative;
     z-index: 10;
@@ -111,6 +110,7 @@ header nav{
 }
 #hero>.content>.hero_info>.book{
     display: flex;
+    width: 206px;
     align-items: center;
     gap: 20px;
     padding: 7px 7px 7px 30px;
@@ -119,6 +119,7 @@ header nav{
     border: none;
     outline: none;
     margin: auto;
+    letter-spacing: -0.7px;
 }
 #hero>.content>.hero_info>.book>img{
     width: 36px;
@@ -162,67 +163,43 @@ header nav{
     #hero{
         padding: 0;
         margin-top: 76px;
-        background-color:#F8B653;
     }
     #hero>.content{
-        width: 100%;
-        margin: auto;
-        padding-top: 50px;
-        background-size: cover;
-        height: 868px;
         padding-top: 140px;
-        background-image: url(/images/hero/hero_mobile_bg.png);
     }
     #hero>.content>.secondary_bg{
-        /* display: none; */
-    }
-    #hero>.content>.secondary_bg_md{
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
+        top: -45vw;
         width: 100%;
-        height: 500px;
     }
     #hero>.content>.hero_info{
         position: relative;
         z-index: 10;
     }
     #hero>.content>.hero_info>.location{
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 14px;
-        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 15px;
     }
     #hero>.content>.hero_info>h1{
-        font-size: 44px;
-        line-height: 44px;
-        font-weight: 700;
-        margin-bottom: 22px;
+        font-size: 62px;
+        line-height: 73px;
+        margin-bottom: 25px;
     }
     #hero>.content>.hero_info>.description{
         font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 20px;
+        line-height: 24px;
         margin-bottom: 40px;
-    }
-    #hero>.content>.hero_info>.book{
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding: 7px 7px 7px 30px;
-        border-radius: 25px;
-        background-color: white;
-        border: none;
-        outline: none;
-        margin: auto;
-    }
-    #hero>.content>.hero_info>.book>img{
-        width: 36px;
-        height: 36px;
     }
 }
 
+
+@media (min-width: 1024px) {
+    #hero>.content>.secondary_bg{
+        top: -60vw;
+        width: 100%;
+    }  
+}
 
 @media (min-width:1280px) {
     header,
@@ -230,9 +207,38 @@ header nav{
     footer{
         padding: 0px;
     }
-
+    header{
+        height: 76px;
+    }
     header>div{
         width: 1170px;
         margin: auto;
     }
-}
+    #hero{
+        padding: 0;
+        margin-top: 76px;
+        min-height: fit-content;
+    }
+    #hero>.content{
+        width: 100%;
+        margin: 0px;
+        padding-left: 198px;
+        background-image: url(/images/hero/hero_bg_pc.jpg);
+        background-size: contain;
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #hero>.content>.hero_info{
+        position: relative;
+        z-index: 10;
+        width: fit-content;
+        text-align: left;
+    }
+    #hero>.content>.secondary_bg{
+        display: none;
+    }  
+    #hero>.content>.hero_info>.book{
+        margin: 0;
+    }
+} 
