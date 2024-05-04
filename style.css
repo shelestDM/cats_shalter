@@ -42,7 +42,10 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 10000;
+    background-color: white;
     height: 62px;
+    box-shadow: 0px 0px 25px #D0D0D040;
 }
 header>div{
     display: flex;
@@ -126,6 +129,97 @@ header nav{
     height: 36px;
 }
 
+#why_we{
+    padding-top: 70px;
+}
+
+#why_we >h2{
+    text-align: center;
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: 700;
+}
+
+#why_we > .cards_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 290px;
+    margin: 40px auto 0px;
+    list-style-type: none;
+}
+
+#why_we > .cards_wrapper > .card {
+    width: 100%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 25px #D0D0D040;
+}
+
+#why_we > .cards_wrapper > .card > img{
+    width: 60px;
+    height: 60px;
+}
+
+#why_we > .cards_wrapper > .card > .heading{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-block: 30px 20px;
+}
+
+#why_we > .cards_wrapper > .card > .description{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+}
+
+#footer{
+    padding:30px 0px;
+    position: relative;
+}
+
+#footer>.content{
+    width: 290px;
+    margin: auto;
+}
+
+#footer>.content>nav>ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px 0px;
+    flex-wrap: wrap;
+    margin-block: 25px 45px;
+}
+
+#footer>.content>nav>ul>li{
+    width: 50%;
+}
+
+#footer>.content>nav>ul>li>a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+}
+
+#footer>.content>.line{
+    position: absolute;
+    bottom: 83px;
+    width: 100vw;
+    left: 0;
+    height: 1px;
+    background-color: #EFEFEF;
+}
+
+#footer>.content>.footer_text{
+    color: var(--accent_gray);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
 @media (min-width:768px) {
     header,
     section, 
@@ -133,7 +227,7 @@ header nav{
         padding-inline: 45px;
     }
 
-    header>div{
+    header{
         height: 76px;
     }
     
@@ -191,14 +285,68 @@ header nav{
         line-height: 24px;
         margin-bottom: 40px;
     }
-}
 
+
+    #why_we{
+        padding-top: 120px;
+    }
+    
+    #why_we >h2{
+        text-align: center;
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 700;
+    }
+    
+    #why_we > .cards_wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 678px;
+        margin: 60px auto 0px;
+    }
+    
+    #why_we > .cards_wrapper > .card {
+        width: 324px;
+    }
+    
+    #why_we > .cards_wrapper > .card > img{
+        width: 75px;
+        height: 75px;
+    }
+    
+    #why_we > .cards_wrapper > .card > .heading{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+}
 
 @media (min-width: 1024px) {
     #hero>.content>.secondary_bg{
-        top: -60vw;
-        width: 100%;
+        display: none;
     }  
+    #hero>.content{
+        width: 100%;
+        margin: 0px;
+        padding-left: 120px;
+        background-image: url(/images/hero/hero_bg_pc.jpg);
+        background-size: contain;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+        min-height: 40vw;
+        max-height: 544px;
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+    }
+    #hero>.content>.hero_info{
+        text-align-last: left;
+    }
+    #hero>.content>.hero_info>.book{
+        margin: 0;
+    }
 }
 
 @media (min-width:1280px) {
@@ -219,26 +367,42 @@ header nav{
         margin-top: 76px;
         min-height: fit-content;
     }
-    #hero>.content{
-        width: 100%;
-        margin: 0px;
-        padding-left: 198px;
-        background-image: url(/images/hero/hero_bg_pc.jpg);
-        background-size: contain;
-        background-position: top;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+
     #hero>.content>.hero_info{
         position: relative;
         z-index: 10;
         width: fit-content;
         text-align: left;
     }
-    #hero>.content>.secondary_bg{
-        display: none;
-    }  
-    #hero>.content>.hero_info>.book{
-        margin: 0;
+
+    #why_we{
+        padding-top: 140px;
+    }
+    
+    #why_we > .cards_wrapper{
+        width: 1170px;
+        margin: 70px auto 0px;
+        gap: 20px 30px;
+    }
+    
+    #why_we > .cards_wrapper > .card {
+        width: 370px;
+        padding: 30px;
+    }
+    
+    #why_we > .cards_wrapper > .card > img{
+        width: 91px;
+        height: 91px;
+    }
+    
+    #why_we > .cards_wrapper > .card > .heading{
+        font-size: 20px;
+        line-height: 28px;
+        margin-block: 35px 20px;
+    }
+
+    #why_we > .cards_wrapper > .card > .description{
+        font-size: 16px;
+        line-height: 22px;
     }
 } 
