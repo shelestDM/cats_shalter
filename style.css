@@ -177,12 +177,12 @@ header nav{
 
 #footer{
     padding:30px 0px;
-    position: relative;
 }
 
 #footer>.content{
-    width: 290px;
     margin: auto;
+    /* padding: 0px 15px; */
+    width: 290px;
 }
 
 #footer>.content>nav>ul{
@@ -190,7 +190,7 @@ header nav{
     display: flex;
     gap: 20px 0px;
     flex-wrap: wrap;
-    margin-block: 25px 45px;
+    margin-block: 25px 0px;
 }
 
 #footer>.content>nav>ul>li{
@@ -204,16 +204,23 @@ header nav{
     font-weight: 600;
 }
 
-#footer>.content>.line{
-    position: absolute;
-    bottom: 83px;
-    width: 100vw;
-    left: 0;
+#footer>.line{
+    margin: auto;
+    padding: 0px 15px;
+    width: 290px;
     height: 1px;
+    margin-block: 30px 15px;
     background-color: #EFEFEF;
 }
 
-#footer>.content>.footer_text{
+#footer>div{
+    margin: auto;
+    /* padding: 0px 15px; */
+    width: 290px;
+}
+
+#footer>div>.footer_text{
+    /* padding: 0px 15px; */
     color: var(--accent_gray);
     font-size: 12px;
     line-height: 14px;
